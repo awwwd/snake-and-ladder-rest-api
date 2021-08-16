@@ -7,10 +7,10 @@ from app.crud.game import (
     delete_games,
     leave_games
 )
-from fastapi import APIRouter, Depends, Body, HTTPException, status
-from fastapi.responses import JSONResponse
 from app.db.mongodb import get_database, MongoClient
 from app.models.game import GameCreate, GameJoin, GamePlay, GameInDBBase, GameLeft
+from fastapi import APIRouter, Depends, Body, HTTPException, status
+from fastapi.responses import JSONResponse
 from typing import List
 
 router = APIRouter()
