@@ -42,7 +42,7 @@ spec:
     spec:
       containers:
         - name: snake-ladder-api
-          image: amitauddy/snake-and-ladder:1.0-beta4
+          image: amitauddy/snake-and-ladder:1.0
           env:
             - name: DB_USER
               valueFrom:
