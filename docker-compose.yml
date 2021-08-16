@@ -1,0 +1,39 @@
+version: '3'
+
+x-aliases:
+  - &db_username root
+  - &db_password root
+  - &db_name snake_ladder
+
+x-common_env: &common_env
+  MONGO_INITDB_ROOT_USERNAME: *db_username
+  MONGO_INITDB_ROOT_PASSWORD: *db_password
+  DATABASE: *db_name
+
+services:
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo
+    environment:
+      <<: *common_env
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      <<: *common_env
+    ports:
+      - 27017:27017
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: *db_username
+      ME_CONFIG_MONGODB_ADMINPASSWORD: *db_password
+      ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
+    depends_on:
+      - mongo
