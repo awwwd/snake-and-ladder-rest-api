@@ -8,7 +8,7 @@ uses mongodb as backend datastore and also provides the API Documentation in Swa
 ![Deployment](assets/deployment.png?raw=true "Kubernetes Deployment View")
 
 ### App Components
-Refer to Swagger UI to get a overview on application components and API.
+Refer to Swagger UI to get an overview on application components and API.
 
 http://snake-ladder-api.traefik.k8s/docs
 
