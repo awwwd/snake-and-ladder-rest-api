@@ -4,8 +4,18 @@ uses mongodb as backend datastore and also provides the API Documentation in Swa
 
 > Note: All configuration variables are overridable from outside as environment variables.
 
+### Sample Kubernetes Deployment View
+![Deployment](assets/deployment.png?raw=true "Kubernetes Deployment View")
+
+### App Components
+Refer to Swagger UI to get a overview on application components and API.
+
+http://snake-ladder-api.traefik.k8s/docs
+
+> Note: The link only works after deployment
+
 ## Pre-requisites
-Make sure you have the following tools installed for development or to simulate a actual kubernetes style 
+Make sure you have the following tools installed for development or to simulate a actual kubernetes style
 deployment in your local cluster.
 - Docker Desktop (development + deployment)
 - Helm (deployment)
@@ -50,7 +60,7 @@ $ helm install traefik/traefik traefik --values traefik-values.yaml
 # This script will deploy the db and app components
 # Creates individual namespaces for database and application
 # Creates a HPA and Ingress for application
-$ bash k8s-setup.sh 
+$ bash k8s-setup.sh
 Usage: bash k8s-setup.sh (deploy|destroy)
 
 # Let's deploy the cluster

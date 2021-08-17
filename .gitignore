@@ -2,3 +2,5 @@ __pycache__
 venv
 junk/
 .idea/
+.vscode/
+.DS_Store
