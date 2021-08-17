@@ -49,7 +49,7 @@ kubernetes:
 EOF
 
 # Install traefik
-$ helm install traefik/traefik traefik --values traefik-values.yaml
+$ helm install traefik traefik/traefik --values traefik-values.yaml
 
 # Add these entries in /etc/hpsts
 # 127.0.0.1	localhost traefik.k8s snake-ladder-api.traefik.k8s
