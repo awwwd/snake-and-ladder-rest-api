@@ -21,7 +21,7 @@ metadata:
   namespace: app
 data:
   dbname: snake_ladder
-  dbhost: mongodb-service.db.svc.cluster.local
+  dbhost: mongodb-0.mongodb-service.db.svc.cluster.local
 ---
 apiVersion: apps/v1
 kind: Deployment
