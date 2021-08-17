@@ -4,7 +4,7 @@ uses mongodb as backend datastore and also provides the API Documentation in Swa
 
 > Note: All configuration variables are overridable from outside as environment variables.
 
-### Sample Kubernetes Deployment View
+### Kubernetes Deployment View
 ![Deployment](assets/deployment.png?raw=true "Kubernetes Deployment View")
 
 ### App Components
